@@ -1,4 +1,5 @@
-# 👷 `image-lazy-loading` A sample lazy loading & CDN worker for a Ghost Blog using Casper
+# 👷 `image-lazy-loading` 
+## A sample lazy loading & CDN worker for a Ghost Blog using Casper
 
 This worker runs on [Cloudflare](https://workers.cloudflare.com/) and does two things
 
