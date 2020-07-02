@@ -1,6 +1,8 @@
 # 👷 `image-lazy-loading` 
 ## A sample lazy loading & CDN worker for a Ghost Blog using Casper
 
+This code was created [as part of this tutorial article](https://www.paolotagliaferri.com/how-to-make-ghost-blog-super-fast-page-experience/)
+
 This worker runs on [Cloudflare](https://workers.cloudflare.com/) and does two things
 
 1. Looks for `img` tags that have specific classes, and adds the `loading=lazy` attribute to them
