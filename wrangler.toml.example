@@ -1,0 +1,7 @@
+name = "image-lazy-loading"
+type = "javascript"
+account_id = YOUR_CF_ACCOUNT_ID
+workers_dev = false
+route = YOUR_WORKER_ROUTE
+zone_id = YOUR_CF_ZONE_ID
+vars = { BLOG_URL = "YOUR_BLOG_URL", CLOUDINARY_URL = "YOUR_CLOUDINARY_URL" }
