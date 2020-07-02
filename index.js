@@ -4,8 +4,6 @@ addEventListener('fetch', event => {
 
 const EXCLUDED_PATHS = ["/ghost","/rss","/content","/assets"]
 const IMG_SELECTORS = ["kg-image", "post-card-image", "feature-image"]
-const LOCAL_CONTENT_URL = BLOG_URL+"content/images/"
-const CDN_FETCH_URL = CLOUDINARY_URL+"image/fetch/q_auto,f_auto,dpr_auto/"
 
 class ElementHandler {
   element(element) {
@@ -21,8 +19,8 @@ class ElementHandler {
         }
 
         // If image is loaded from local content, rewrite to pull from CDN
-        if(imgSrc.startsWith(LOCAL_CONTENT_URL)) {
-          element.setAttribute('src',CDN_FETCH_URL+imgSrc)
+        if(imgSrc.startsWith(ENV_LOCAL_CONTENT_URL)) {
+          element.setAttribute('src',ENV_CDN_FETCH_URL+imgSrc)
         }
 
     }
