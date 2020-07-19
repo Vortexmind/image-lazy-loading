@@ -3,7 +3,7 @@ addEventListener('fetch', event => {
 })
 
 const EXCLUDED_PATHS = ["/ghost","/rss","/content","/assets"]
-const IMG_SELECTORS = ["kg-image", "post-card-image", "feature-image"]
+const IMG_SELECTORS = ["kg-image", "post-card-image"]
 
 class ElementHandler {
   element(element) {
