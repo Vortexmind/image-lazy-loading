@@ -4,4 +4,4 @@ account_id = YOUR_CF_ACCOUNT_ID
 workers_dev = false
 route = YOUR_WORKER_ROUTE
 zone_id = YOUR_CF_ZONE_ID
-vars = { ENV_LOCAL_CONTENT_URL = "<path to (and including) /content/images>", ENV_CDN_FETCH_URL = "<your CDN fetch url including transformation parameters>" }
+vars = { ENV_LOCAL_CONTENT_URL = "<path to (and including) /content/images>", ENV_CDN_FETCH_URL = "<your CDN fetch url including transformation parameters>", ENV_ENABLE_CDN_IMAGE = "on/off" }
