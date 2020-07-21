@@ -8,7 +8,7 @@ This worker runs on [Cloudflare](https://workers.cloudflare.com/) and does two t
 1. Looks for `img` tags that have specific classes, and adds the `loading=lazy` attribute to them
 2. Looks up for images that are being served directly from your blog's content images and rewrites them to pull from a CDN URL
 
-For example, you can use Cloudflare's [image resizing URL scheme](https://developers.cloudflare.com/images/about) Cloudinary's Remote image fetch URL [as shown here](https://cloudinary.com/documentation/fetch_remote_images#remote_image_fetch_url)
+For example, you can use Cloudflare's [image resizing URL scheme](https://developers.cloudflare.com/images/about) or Cloudinary's Remote image fetch URL [as shown here](https://cloudinary.com/documentation/fetch_remote_images#remote_image_fetch_url). Other providers may support similar URL based APIs.
 
 The worker has two environment variables that needs to be set in your `wrangler.toml` file alongside the other options.
 See the provided `wrangler.toml.example` included in this repository
