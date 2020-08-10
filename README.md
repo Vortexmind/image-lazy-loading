@@ -1,5 +1,7 @@
-# 👷 `image-lazy-loading` 
+# 👷 `image-lazy-loading`
+
 ## A sample lazy loading & CDN Cloudflare Worker for a Ghost Blog using Casper
+
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/Vortexmind/image-lazy-loading.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Vortexmind/image-lazy-loading/alerts/) [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Vortexmind/image-lazy-loading.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Vortexmind/image-lazy-loading/context:javascript)
 
 This code was created [as part of this tutorial article](https://www.paolotagliaferri.com/how-to-make-ghost-blog-super-fast-page-experience/)
@@ -28,14 +30,14 @@ Further documentation for Wrangler can be found [here](https://developers.cloudf
 5. Once happy, run `wrangler publish` to deploy the worker and route to your zone
 
 Example `wrangler.toml` set up (pay attention to trailing slashes)
-* `route = https://www.yourblog.com/*` 
-* `ENV_LOCAL_CONTENT_URL = https://www.yourblog.com/`
-* `ENV_RELATIVE_CONTENT_PREFIX` = "/content/images/"
-* Cloudflare `ENV_CDN_FETCH_URL= https://<your zone domain>/cdn-cgi/image/format=auto,metadata=copyright,quality=85/`
-* Cloudinary `ENV_CDN_FETCH_URL = https://res.cloudinary.com/<YOUR CLOUDINARY USER>/image/fetch/q_auto,f_auto,dpr_auto/`
-* `ENV_ENABLE_CDN_IMAGE = on`
 
+- `route = https://www.yourblog.com/*`
+- `ENV_LOCAL_CONTENT_URL = https://www.yourblog.com/`
+- `ENV_RELATIVE_CONTENT_PREFIX` = "/content/images/"
+- Cloudflare `ENV_CDN_FETCH_URL= https://<your zone domain>/cdn-cgi/image/format=auto,metadata=copyright,quality=85/`
+- Cloudinary `ENV_CDN_FETCH_URL = https://res.cloudinary.com/<YOUR CLOUDINARY USER>/image/fetch/q_auto,f_auto,dpr_auto/`
+- `ENV_ENABLE_CDN_IMAGE = on`
 
 #### Contributors
 
-[Stanislas](https://github.com/angristan/) for the [original idea](https://stanislas.blog/2020/05/native-image-lazy-loading-ghost-cloudflare-worker/) 
+[Stanislas](https://github.com/angristan/) for the [original idea](https://stanislas.blog/2020/05/native-image-lazy-loading-ghost-cloudflare-worker/)
