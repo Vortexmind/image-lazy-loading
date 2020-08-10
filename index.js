@@ -1,3 +1,5 @@
+import escapeStringRegexp from 'escape-string-regexp'
+
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event))
 })
@@ -11,6 +13,9 @@ class ElementHandler {
 
       const imgClass = element.getAttribute('class') || ''
       const imgSrc = element.getAttribute('src') || ''
+      const imgSrcSet = element.getAttribute('srcset') || ''
+      const escapedUrl = escapeStringRegexp(ENV_LOCAL_CONTENT_URL)
+      const localContentRegex = new RegExp(escapedUrl,"gi")
 
       if (IMG_SELECTORS.some( val => imgClass.includes(val) )) {
         // Add lazy loading if not defined already
@@ -20,9 +25,14 @@ class ElementHandler {
       }
 
       if (ENV_ENABLE_CDN_IMAGE === "on" && CDN_IMG_SELECTORS.some( val => imgClass.includes(val) )) {
+          
           // If image is loaded from local content, rewrite to pull from CDN
           if(imgSrc.startsWith(ENV_LOCAL_CONTENT_URL)) {
             element.setAttribute('src',ENV_CDN_FETCH_URL+imgSrc)
+          }
+
+          if(imgSrcSet.includes(ENV_LOCAL_CONTENT_URL)){
+            element.setAttribute('srcset',imgSrcSet.replace(localContentRegex,ENV_CDN_FETCH_URL))
           }
       }
   }

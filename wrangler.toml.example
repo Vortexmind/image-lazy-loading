@@ -1,5 +1,5 @@
 name = "image-lazy-loading"
-type = "javascript"
+type = "webpack"
 account_id = YOUR_CF_ACCOUNT_ID
 workers_dev = false
 route = YOUR_WORKER_ROUTE
