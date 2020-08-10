@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import escapeStringRegexp from 'escape-string-regexp'
 
 addEventListener('fetch', (event) => {
@@ -19,7 +20,7 @@ class ElementHandler {
     const imgSrc = element.getAttribute('src') || ''
     const imgSrcSet = element.getAttribute('srcset') || ''
     const escapedUrl = escapeStringRegexp(ENV_LOCAL_CONTENT_URL)
-    const localContentRegex = new RegExp(escapedUrl, 'gi')
+    const localContentRegex = new RegExp(escapedUrl, 'giu')
 
     if (IMG_SELECTORS.some((val) => imgClass.includes(val))) {
       // Add lazy loading if not defined already
@@ -36,7 +37,7 @@ class ElementHandler {
       if (
         imgSrc.startsWith(
           ENV_LOCAL_CONTENT_URL ||
-            imgSrc.startsWith(ENV_RELATIVE_CONTENT_PREFIX),
+            imgSrc.startsWith(ENV_RELATIVE_CONTENT_PREFIX)
         )
       ) {
         element.setAttribute('src', ENV_CDN_FETCH_URL + imgSrc)
@@ -45,7 +46,7 @@ class ElementHandler {
       if (imgSrcSet.includes(ENV_LOCAL_CONTENT_URL)) {
         element.setAttribute(
           'srcset',
-          imgSrcSet.replace(localContentRegex, ENV_CDN_FETCH_URL),
+          imgSrcSet.replace(localContentRegex, ENV_CDN_FETCH_URL)
         )
       }
     }

@@ -5,15 +5,16 @@
   "description": "A sample lazy loading & CDN worker for a Ghost Blog using Casper",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --plugin markdown --ext js,md .",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write '**/*.{js,css,json,md}'"
+    "lint": "eslint --fix . && echo 'Lint complete.'",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Paolo Tagliaferri <me@paolotagliaferri.com>",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "7.6.0",
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-markdown": "1.0.2",
+    "eslint-plugin-prettier": "^3.1.4",
     "prettier": "2.0.5"
   },
   "dependencies": {
