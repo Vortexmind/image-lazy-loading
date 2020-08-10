@@ -29,7 +29,8 @@ Further documentation for Wrangler can be found [here](https://developers.cloudf
 
 Example `wrangler.toml` set up (pay attention to trailing slashes)
 * `route = https://www.yourblog.com/*` 
-* `ENV_LOCAL_CONTENT_URL = https://www.yourblog.com/content/images`
+* `ENV_LOCAL_CONTENT_URL = https://www.yourblog.com/`
+* `ENV_RELATIVE_CONTENT_PREFIX` = "/content/images/"
 * Cloudflare `ENV_CDN_FETCH_URL= https://<your zone domain>/cdn-cgi/image/format=auto,metadata=copyright,quality=85/`
 * Cloudinary `ENV_CDN_FETCH_URL = https://res.cloudinary.com/<YOUR CLOUDINARY USER>/image/fetch/q_auto,f_auto,dpr_auto/`
 * `ENV_ENABLE_CDN_IMAGE = on`
