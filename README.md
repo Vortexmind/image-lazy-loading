@@ -2,7 +2,7 @@
 
 ## A sample lazy loading & CDN Cloudflare Worker for a Ghost Blog using Casper
 
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/Vortexmind/image-lazy-loading.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Vortexmind/image-lazy-loading/alerts/) [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Vortexmind/image-lazy-loading.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Vortexmind/image-lazy-loading/context:javascript)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/Vortexmind/image-lazy-loading.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Vortexmind/image-lazy-loading/alerts/) [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Vortexmind/image-lazy-loading.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Vortexmind/image-lazy-loading/context:javascript) [Build Status](https://api.travis-ci.com/Vortexmind/image-lazy-loading.svg?branch=master)
 
 This code was created [as part of this tutorial article](https://www.paolotagliaferri.com/how-to-make-ghost-blog-super-fast-page-experience/)
 
