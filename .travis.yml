@@ -3,13 +3,3 @@ dist: bionic
 language: node_js
 node_js:
     - node
-
-before_deploy:
-    - npm i @cloudflare/wrangler -g
-
-deploy:
-    provider: script
-    script: npx wrangler publish
-    skip_cleanup: true
-    on:
-        branch: master
