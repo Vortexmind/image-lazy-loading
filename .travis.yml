@@ -1,8 +1,11 @@
 os: linux
-dist: xenial
+dist: bionic
 language: node_js
 node_js:
     - node
+
+before_deploy:
+    -npm i @cloudflare/wrangler -g
 
 deploy:
     provider: script
