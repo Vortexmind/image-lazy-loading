@@ -1,13 +1,14 @@
 os:
     - linux
-    dist: xenial
-    language: node_js
-    node_js:
-      - "node"
-    
-    deploy:
-      - provider: script
-        script: npx wrangler publish
-        skip_cleanup: true
-        on:
-          all_branches: true
+   dist: xenial
+   language: node_js
+   node_js:
+    - node
+   
+   deploy:
+    - provider: script
+      script: npx wrangler publish
+      skip_cleanup: true
+      "on":
+       all_branches: true
+   
