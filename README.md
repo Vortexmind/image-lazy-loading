@@ -14,6 +14,8 @@ This worker runs on [Cloudflare](https://workers.cloudflare.com/) and does two t
 
 For example, you can use Cloudflare's [image resizing URL scheme](https://developers.cloudflare.com/images/about) or Cloudinary's Remote image fetch URL [as shown here](https://cloudinary.com/documentation/fetch_remote_images#remote_image_fetch_url). Other providers may support similar URL based APIs.
 
+If you need specifically an image resizer for Cloudflare Image Resizing, [have a look at my other project here](https://github.com/Vortexmind/image-resizing)
+
 The worker has two environment variables that needs to be set in your `wrangler.toml` file alongside the other options.
 See the provided `wrangler.toml.example` included in this repository
 
