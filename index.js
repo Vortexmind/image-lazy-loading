@@ -6,6 +6,7 @@ addEventListener('fetch', (event) => {
 })
 
 const EXCLUDED_PATHS = ['/ghost', '/rss', '/content', '/assets']
+const EXCLUDED_SUFFIXES = ['/amp']
 const IMG_SELECTORS = ['kg-image', 'post-card-image']
 const CDN_IMG_SELECTORS = [
   'kg-image',
@@ -55,7 +56,8 @@ async function handleRequest(event) {
   const pathname = new URL(event.request.url).pathname.toLowerCase()
   const res = await fetch(event.request)
 
-  if (EXCLUDED_PATHS.some((val) => pathname.startsWith(val))) {
+  if (EXCLUDED_PATHS.some((val) => pathname.startsWith(val)) 
+      || EXCLUDED_SUFFIXES.some((val) => pathname.endsWith(val))) {
     return res
   } else {
     return new HTMLRewriter().on('img', new ElementHandler()).transform(res)
