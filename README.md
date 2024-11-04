@@ -4,7 +4,7 @@
 
 This code was created [as part of this tutorial article](https://www.paolotagliaferri.com/how-to-make-ghost-blog-super-fast-page-experience/)
 
-This worker runs on [Cloudflare](https://workers.cloudflare.com/) and does two things
+This worker runs on [Cloudflare](https://workers.cloudflare.com/) and does two things:
 
 1. Looks for `img` tags that have specific classes, and adds the `loading=lazy` attribute to them
 2. Looks up for images that are being served directly from your blog's content images and rewrites them to pull from a CDN URL
