@@ -14,7 +14,6 @@ const CDN_IMG_SELECTORS = [
   'feature-image',
   'author-profile-image',
 ]
-const RELATIVE_CONTENT_PREFIX = ENV_RELATIVE_CONTENT_PREFIX || '/content/images/'
 
 class ElementHandler {
   element(element) {
@@ -38,7 +37,7 @@ class ElementHandler {
       // If image is loaded from local content, rewrite to pull from CDN
       if (
         imgSrc.startsWith(ENV_LOCAL_CONTENT_URL) ||
-        imgSrc.startsWith(RELATIVE_CONTENT_PREFIX)
+        imgSrc.startsWith(ENV_RELATIVE_CONTENT_PREFIX)
       ) {
         element.setAttribute('src', ENV_CDN_FETCH_URL + imgSrc)
       }
