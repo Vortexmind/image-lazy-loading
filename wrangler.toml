@@ -1,0 +1,4 @@
+name = "image-lazy-loading"
+type = "webpack"
+workers_dev = false
+vars = { ENV_RELATIVE_CONTENT_PREFIX = "/content/images/", ENV_LOCAL_CONTENT_URL = "https://www.paolotagliaferri.com", ENV_CDN_FETCH_URL = "https://www.paolotagliaferri.com/cdn-cgi/image/format=auto,metadata=copyright,quality=85,scale-down,width=1000/", ENV_ENABLE_CDN_IMAGE = "on }
