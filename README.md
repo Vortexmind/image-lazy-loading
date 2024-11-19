@@ -1,6 +1,7 @@
 # 👷 `image-lazy-loading`
 
 ## A sample lazy loading & CDN Cloudflare Worker for a Ghost Blog using Casper
+[![Known Vulnerabilities](https://snyk.io/test/github/Vortexmind/image-lazy-loading/badge.svg)](https://snyk.io/test/github/Vortexmind/image-lazy-loading)
 
 This code was created [as part of this tutorial article](https://www.paolotagliaferri.com/how-to-make-ghost-blog-super-fast-page-experience/)
 
